@@ -4,7 +4,7 @@ import { StyleSheet } from '@src/theme/StyleSheet';
 import { parseStyleSheet } from '@displaykit/responsive_styles';
 
 interface StyledBaseComponent {
-    styleSheet?: StyleSheet;
+    stylesheet?: StyleSheet;
 }
 
 const StyledBaseComponent = styled.div<StyledBaseComponent>`
@@ -12,15 +12,15 @@ const StyledBaseComponent = styled.div<StyledBaseComponent>`
     flex-direction: column;
     align-content: flex-start;
     flex-shrink: 0;
-    ${({styleSheet}) => parseStyleSheet(styleSheet)}
+    ${({ stylesheet }) => parseStyleSheet(stylesheet)}
 `;
 
-export const BaseComponent = (props) => {
+export const BaseComponent = ({ styleSheet, ...otherProps }) => {
     return (
-        <StyledBaseComponent {...props} />
+        <StyledBaseComponent stylesheet={styleSheet} {...otherProps} />
     )
 }
 
 BaseComponent.defaultProps = {
     styleSheet: {},
-};
+}

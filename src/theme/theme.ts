@@ -2,7 +2,7 @@ import { typography } from "./defaults/typography";
 import { colors } from "./defaults/colors";
 
 const theme = {
-    typograph: typography,
+    typography: typography,
     colors: colors
 };
 

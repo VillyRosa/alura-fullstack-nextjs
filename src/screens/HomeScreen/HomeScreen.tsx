@@ -14,19 +14,19 @@ export default function HomeScreen() {
         <BaseComponent
          tag="main"
          styleSheet={{
-            backgroundColor: theme.colors.neutral.x050,
+            backgroundColor: theme.colors.neutral.x000,
             color: '#333',
             flex: 1,
+            alignItems: 'center'
          }}
         >
-            <Link colorVariant="accent" href="/sobre">
-                Vá para a página sobre
-            </Link>
-            <Link href="https://github.com/villyrosa">
-                Vá para o meu github
-            </Link>
             <Background />
             <Menu />
+            <Feed>
+                <Feed.Header />
+            </Feed>
+            <Footer />
+            {/* 
             <Feed>
                 <Feed.Header />
                 <Text tag="h1" variant='display1'>
@@ -34,7 +34,7 @@ export default function HomeScreen() {
                 </Text>
                 <Feed.Posts />
             </Feed>
-            <Footer />
+            */}
         </BaseComponent>
     )
 }

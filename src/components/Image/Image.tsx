@@ -4,16 +4,16 @@ import { StyleSheet } from "@src/theme/StyleSheet";
 interface ImageProps {
     src: string;
     alt: string;
-    styleSheet?: StyleSheet
+    styleSheet?: StyleSheet;
 }
-
-export default function Image({ src, alt, ...props }: ImageProps) {
+export default function Image({ src, alt, styleSheet, ...props }: ImageProps) {
     return (
-        <BaseComponent 
-         as="img"
-         src={src}
-         alt={alt}
-         {...props}
+        <BaseComponent
+            as="img"
+            src={src}
+            alt={alt}
+            styleSheet={styleSheet}
+            {...props}
         />
     )
 }
